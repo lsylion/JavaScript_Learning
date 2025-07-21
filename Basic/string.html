@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <title>String Manipulation in JavaScript</title>
+
+<body>
+    <h1>SPlite based on space</h1>
+    <P id="s1"></P>
+
+    <h2>Split based on pattern</h2>
+    <p id="s2"></p>
+
+    <h3>Split based on comma</h3>
+    <p id="s3"></p>
+
+    <h4>Split based on regular expression</h4>
+    <p id="s4"></p>
+
+    <script>
+        let str1 = "Hello world string handling demo";
+        let textArray = str1.split(" ");
+        document.getElementById("s1").innerHTML = textArray;
+        console.log("String split into array:", textArray);
+
+
+        let str2 = "Apple-Banana-Cherry";
+        let patternArray = str2.split("-");
+        document.getElementById("s2").innerHTML = patternArray;
+        console.log("String split by pattern:", patternArray);
+
+        let str3 = "JavaScript,HTML,CSS,Bootstrap,ViewJS,ReactJS";
+        let patternArray2 = str3.split(",",3);
+        document.getElementById("s3").innerHTML = patternArray2.join(", ");
+        console.log("String split by comma:", patternArray2);
+
+        // split using a regular expression, same as Java
+        const messyString = "apple, banana ; orange .  grape";
+        const cleanedArray = messyString.split(/[,;.]+/);  // splits without considering spaces
+        // not split(/[,;.]\s*/)
+        document.getElementById("s4").innerHTML = cleanedArray.join(", ");
+        console.log("Cleaned array:", cleanedArray);
+        
+
+
+
+    </script>
+
+</body>
+
+</head>
+</html>

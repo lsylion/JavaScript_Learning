@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Function Demonstration in JavaScript
+    </title>
+
+</head>
+
+<body>
+    <h2>Demonstration on functions</h2>
+
+    <script>
+        // function without parameters
+        function greet() {
+            console.log("Hello, welcome to this is a function without parameters.");
+        }
+        // Call the function
+        greet();
+
+        function greetUser(name) {
+            console.log("Hello, " + name + "! Welcome to the function demonstration.");
+        }
+        // Call the function with an argument
+        greetUser("Alice"); 
+
+
+        // function with parameters
+        function addNumbers(a, b) {
+            return a + b;
+        }
+        // Call the function with arguments
+        addNumbers(5, 10);
+
+
+
+        // function with return value
+        function squareNumber(num) {
+            return num * num;
+        }
+        // Call the function and store the result
+        let squaredValue = squareNumber(4);   
+        console.log("Square of 4 is:", squaredValue);
+
+
+
+
+        // function with default value as parameters
+        function multiplyNumbers(a, b = 3) {
+            console.log(`the multiple is ${b}`);
+            return a * b;
+        }
+        // Call the function with one argument
+        let product = multiplyNumbers(5);   
+        console.log("Product with default value is:", product);
+
+
+
+        // local and global variables(scoping )
+        function sample(){
+            data=100;
+            var localData = 200; // local variable
+            let localData2 = 300; // local variable
+            const localData3 = 400; // local variable
+
+            console.log("Inside function, local data is:", localData);
+            console.log("Inside function, data is:", data);
+            console.log("Inside function, localData2 is:", localData2);
+            console.log("Inside function, localData3 is:", localData3);
+        }
+
+        sample();
+        
+        console.log("Outside function, data is:", data); // data is accessible here because it was not declared with var, let, or const
+        // console.log("Outside function, localData is:", localData); // This will throw an error because localData is not accessible outside the function
+        // console.log("Outside function, localData2 is:", localData2); // This will throw an error because localData2 is not accessible outside the function
+        // console.log("Outside function, localData3 is:", localData3); // This will throw an error because localData3 is not accessible outside the function
+
+    /* another scope example
+        function sayHello(name){
+            for (var i = 0; i < 5; i++) {
+                console.log("Hello"+ name + ", this is iteration number: " + i);
+            }
+        }
+        sayHello("TOm");
+        console.log("Outside loop, i is:", i); // i is accessible here because it was declared with var
+      */ 
+
+
+        // creating javascript objects
+        let objTest = {
+            name: "Test Object",
+            age: 25,
+            email: "test@qq.com",
+        };
+        console.log("Object properties:", objTest);
+        // Accessing object properties
+        console.log("Name:", objTest.name);
+        console.log(`Age: ${objTest.age}`);
+        console.log(`email: ${objTest.email}`);
+
+        // create an object with a function
+        let objEmployee = {
+            name: "John Doe",
+            position: "Software Engineer",
+            salary: 60000,
+            // Method to display employee details
+            displayDetails: function() {
+                console.log(`Name: ${this.name}, Position: ${this.position}, Salary: ${this.salary}`);
+            },
+            greet: function() {
+                console.log(`Hello, ${this.name},my position is ${this.position}.`);
+            }
+        
+        };
+        console.log("Object with function properties:", objEmployee);
+
+        // Call the method to display employee details
+        objEmployee.displayDetails();   
+        // Accessing object properties using bracket notation
+        console.log("Employee Name:", objEmployee["name"]);
+        console.log("Employee Position:", objEmployee["position"]);
+        console.log("Employee Salary:", objEmployee["salary"]);
+        // Adding a new property to the object
+        objEmployee.department = "IT";
+        console.log("Updated Employee Object:", objEmployee);
+        // Deleting a property from the object
+        delete objEmployee.salary;
+        console.log("Employee Object after deletion:", objEmployee);
+
+
+
+        console.log(JSON.stringify(objEmployee)); // Convert object to JSON string
+        console.log(JSON.parse('{"name":"Jane Doe","position":"Manager","salary":80000}')); // Convert JSON string to object
+        console.log("JSON Object:", JSON.parse('{"name":"Jane Doe","position":"Manager","salary":80000}')); 
+
+        
+    
+    </script>
+
+
+</body>
+
+</html>
