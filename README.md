@@ -46,6 +46,25 @@ class expression(class has its own name) & class declaration() - 2 ways to defin
 
 define constructors
 
+```JavaScript
+class Car(){
+    ...
+    constructor(){
+
+    }
+
+    accelerate(){
+        ..
+        this.speed++;   // what is this?
+    }
+
+}
+```
+
+
+
+Getter and Setter
+Creating Instances or Objects
 
 ### 3.Instantiating classes
 
