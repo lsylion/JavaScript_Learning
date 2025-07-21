@@ -65,7 +65,25 @@ class Car(){
 
 Getter and Setter
 Creating Instances or Objects
+---
+Notes: a js class is not template object
 
 ### 3.Instantiating classes
 
 ### 4.Inheritance
+very similar to Java & C#
+key word `extends`
+
+
+### 5. static methods
+?
+
+## Error Handling
+?
+logic error, runtime error, 
+manage runtime errors: 
+    to manage runtime errors in JS, the error handling concept:
+        1. try
+        2. catch
+        3. finally
+    
