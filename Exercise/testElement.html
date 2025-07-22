@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Element Class Demonstration in JavaScript</title>
+    <script src="element.js"></script>
+</head>
+
+<body>
+    <h1>Element Class Demonstration in JavaScript</h1>
+    
+    <script>
+       if (gear <= 1.3){
+            console.log("This is a small car.");
+        } else if (gear == 5.0) {
+            console.log("The speed shold be over 45mph.");
+        } else if(gear == 1.0) {
+            console.log("he speed should less than 10mph.");
+        }
+
+        // judge leap years from 1900 to 2000
+        for (i = 1900; i <= 2000; i++) {
+            console.log("The year is " + i);
+            if (i % 4 == 0) {
+                console.log(i + " is a leap year.");
+            } else {
+                console.log(i + " is not a leap year.");
+            }
+            // when the leap year appears five times, break the loop
+    
+            if (i == 1999) {
+                console.log("The loop has reached the end.");
+                break;
+            }
+        }
+    </script>
+</html>

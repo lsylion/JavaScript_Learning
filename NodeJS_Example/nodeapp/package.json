@@ -1,0 +1,11 @@
+{
+  "name": "sampleapp",
+  "version": "1.0.0",
+  "description": "introduction to backend development using node and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Lynn",
+  "license": "ISC"
+}
